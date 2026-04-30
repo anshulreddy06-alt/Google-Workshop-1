@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", "Arial", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "Courier New", "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-neon-cyan: #00f3ff;
+  --color-neon-pink: #ff00ff;
+  --color-neon-purple: #a855f7;
+  --color-neon-green: #39ff14;
+  --color-bg-dark: #050510;
+  --color-glass: rgba(255, 255, 255, 0.08);
+  --color-glass-border: rgba(255, 255, 255, 0.12);
+}
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-white antialiased overflow-hidden selection:bg-neon-cyan selection:text-black;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-glass backdrop-blur-[12px] border border-glass-border rounded-[20px] shadow-[0_8px_32px_0_rgba(0,0,0,0.4)];
+  }
+
+  .neon-glow-cyan {
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+  }
+
+  .neon-glow-pink {
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.5);
+  }
+
+  .neon-glow-green {
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
+  }
+
+  .neon-text-cyan {
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.7);
+  }
+
+  .neon-text-pink {
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+  }
+
+  .neon-text-green {
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.7);
+  }
+}
